@@ -1,0 +1,109 @@
+@mixin grid($columns: 1, $gap: 0, $rows: auto, $jc: center, $ac: center) {
+	display: grid;
+	grid-template-columns: repeat($columns, 1fr);
+	grid-gap: $gap;
+	justify-content: $jc;
+	align-content: $ac;
+	grid-auto-rows: $rows;
+	grid-auto-flow: dense;
+
+	> * {
+		@media screen and (max-width:768px) {
+			grid-column: 1;
+		}
+	}
+
+	@media screen and (max-width: 969px) {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: $gap/2;
+	}
+
+	@media screen and (max-width:768px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+@mixin grid-areas($areas) {
+	@media screen and (min-width: 969px) {
+		grid-template-areas: $areas;
+	}
+}
+
+@mixin grid-area($area) {
+	@media screen and (min-width: 969px) {
+		grid-areas: $area;
+	}
+}
+
+@mixin grid-mix($columns: 1fr, $gap: 0, $rows: auto, $jc: center, $ac: center) {
+	display: grid;
+	grid-template-columns: $columns;
+	grid-gap: $gap;
+	justify-content: $jc;
+	align-content: $ac;
+	grid-auto-rows: $rows;
+	grid-auto-flow: dense;
+
+	> * {
+		@media screen and (max-width:768px) {
+			grid-column: 1;
+		}
+	}
+
+	@media screen and (max-width: 969px) {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: $gap/2;
+	}
+
+	@media screen and (max-width:768px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+@mixin col($col, $begin: "none") {
+
+	z-index: 999;
+
+	@if $begin != "none" {
+		@media only screen and (min-width: 768px) {
+			grid-column: ($begin/2) / span ($col/2);
+		}
+		@media only screen and (min-width: 969px) {
+			grid-column: ($begin) / span ($col);
+		}
+	} @else {
+		@media only screen and (min-width: 768px) {
+			grid-column: span $col/2;
+		}
+		@media only screen and (min-width: 969px) {
+			grid-column: span $col;
+		}
+	}	
+}
+@mixin row($row, $begin: "none") {
+
+	@if $begin != "none" {
+		@media only screen and (min-width: 768px) {
+			grid-row: ($begin/2) / span ($row/2);
+		}
+		@media only screen and (min-width: 969px) {
+			grid-row: ($begin) / span ($row);
+		}
+	} @else {
+		@media only screen and (min-width: 768px) {
+			grid-row: span $row/2;
+		}
+		@media only screen and (min-width: 969px) {
+			grid-row: span $row;
+		}
+	}	
+}
+
+@for $i from 2 through 6 {
+	.row-#{$i} {
+		@include row($i);
+	}
+	.col-#{$i} {
+		@include col($i);
+	}
+}

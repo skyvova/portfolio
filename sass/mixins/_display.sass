@@ -1,0 +1,6 @@
+@mixin display($from, $display: block)
+	display: none
+
+	@media screen and (min-width: $from)
+		display: $display
+		
