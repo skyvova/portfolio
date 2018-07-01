@@ -1,0 +1,39 @@
+.header
+	display: flex
+	justify-content: flex-start
+	align-items: center
+
+.subtitle-main
+	text-align: left
+	font-size: 1.5rem
+	letter-spacing: 3px
+
+.title-main
+	margin-top: 1rem
+	letter-spacing: 3px
+	text-align: center
+	text-transform: uppercase
+
+.tag
+	padding: 5px 15px
+	border-radius: 8px
+
+	&-wrapper
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+
+	&-active
+		background-color: #222
+
+.main-img
+	border-radius: 50%
+	box-shadow: $shadow
+	transition: $transition
+
+	&:hover
+		box-shadow: $shadow-big
+
+	&-wrapper
+		max-width: 150px
+		margin: 2rem 4rem 1rem 2rem
