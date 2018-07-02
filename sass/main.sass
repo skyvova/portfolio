@@ -13,6 +13,11 @@
 @import "header/header"
 @import "main/form"
 
+.socials
+	font-size: 1.5rem
+	margin: 0 0.3rem
+	color: #ccc
+
 .arrow
 	color: #fff
 	align-self: center
@@ -83,7 +88,10 @@
 			opacity: 0
 
 	&-other
-		height: 45vh
+		height: 60vh
+
+		@media screen and (max-width: 768px)
+			margin-bottom: 1rem
 
 		.work-tag
 			font-size: 0.8rem
@@ -96,14 +104,8 @@
 			flex-direction: column
 			justify-content: space-between
 			padding: 3vh 0.5rem
-
-	&-main
-		background-image: url("../img/works/1.jpg")
-		height: 94vh
-		margin-top: 3vh
 		
 .info-block
-	min-height: 100vh
 	position: relative
 	display: flex
 	flex-direction: column
