@@ -46,13 +46,13 @@ background-color: #293237;
 }
 
 @keyframes orbit-left {
-    from { transform: translateY(0px); }
-    to   { transform: translateY(50px) translateY(-50px); }
+    from { transform: translateY(0px), translateY(50px); }
+    to   { transform: translateY(50px), translateY(-50px); }
 }
 
 @keyframes orbit-right {
-    from { transform: translateY(0px); }
-    to   { transform: translateY(-50px) translateY(50px); }
+    from { transform: translateY(0px), translateY(-50px); }
+    to   { transform: translateY(-50px), translateY(50px); }
 }
 
 .blob.orbit-right {
@@ -75,7 +75,11 @@ background-color: #9E525F;
 	.paypal-form {
 		display: inline-block;
 	}
-
+	@media screen and (max-width: 690px) {
+		.subtitle-main {
+			text-align: center;
+		}
+	}
 </style>
 	
 </head>
@@ -103,16 +107,17 @@ background-color: #9E525F;
 					</div>
 				</div>
 				<!-- /.col-md -->
-				<div class="col-6 col-md-4">
+				<div class="col-12 col-md-4">
 					<h3 class="subtitle-main" style="font-family: 'Alegreya', serif;letter-spacing: 1px;">Владимир Озиминский</h3>
 					<div>
+						<form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 						<a href="https://www.instagram.com/oziminsky" target="_blank">
 							<i class="socials fab fa-instagram"></i></a>
 							<a href="http://t.me/oziminskyi" target="_blank">
 								<i class="socials fab fa-telegram-plane"></i></a>
 								<a href="mailto: skyvova@ukr.net" target="_blank">
 									<i class="socials fas fa-envelope"></i></a>
-						<form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="6U2MAU3JHESYN">
 <input type="image" class="img-responsive" src="https://woocommerce.com/wp-content/uploads/2016/04/PayPal-Express@2x.png" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!">
