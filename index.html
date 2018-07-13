@@ -46,13 +46,13 @@ background-color: #293237;
 }
 
 @keyframes orbit-left {
-    from { transform: rotate(0deg) translateY(0px); }
-    to   { transform: rotate(360deg) translateY(50px); }
+    from { transform: translateY(0px); }
+    to   { transform: translateY(50px) translateY(-50px); }
 }
 
 @keyframes orbit-right {
-    from { transform: rotate(360deg) translateY(50px); }
-    to   { transform: rotate(0deg) translateY(0px); }
+    from { transform: translateY(0px); }
+    to   { transform: translateY(-50px) translateY(50px); }
 }
 
 .blob.orbit-right {
