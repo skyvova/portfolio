@@ -237,11 +237,14 @@ background-color: #293237;
 	let loader  = document.getElementById('loader'),
 	    wrapper = document.getElementById('main-wrapper');
 	
-	document.addEventListener("DOMContentLoaded", start);
+// 	document.addEventListener("DOMContentLoaded", start);
+	document.onload = start;
 	
 	function start() {
+		setTimeOut(function() {
 		loader.style.display = "none";
 		wrapper.style.display = "block";
+		}, 500);
 	};
 </script>
 
