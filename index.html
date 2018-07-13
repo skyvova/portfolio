@@ -229,7 +229,7 @@ background-image: linear-gradient(to left bottom, #293237, #3d4359, #6f4b6c, #a2
 
 <link rel="stylesheet" href="css/main.min.css">
 <style>
-body {
+.main {
 	background-image: linear-gradient(to left bottom, #293237, #3d4359, #6f4b6c, #a25461, #b86e43);	
 }
 </style>
@@ -237,7 +237,7 @@ body {
 	let loader  = document.getElementById('loader'),
 	    wrapper = document.getElementById('main-wrapper');
 	
-	window.onload = start();
+	document.onload = start();
 	
 	function start() {
 		loader.style.display = "none";
