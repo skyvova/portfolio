@@ -15,52 +15,10 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1024">
-<style>
-#main-wrapper {
-  display: none;
-}
-body {	
-background-color: #293237;
-}
-	.main {
-	background-image: linear-gradient(to bottom, #293237, #3d4359, #6f4b6c, #a25461, #b86e43);
-}
-	.contact-form-wrapper {
-		height: 120px;
-	}
-.blobs{
-  width:100vw;
-  height: 100vh;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.blob{
-  background: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius:50%;
-}
-
-@keyframes orbit-left {
-    from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
-}
-
-@keyframes orbit-right {
-    from { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
-    to   { transform: rotate(0deg) translateX(50px) rotate(0deg); }
-}
-
-.blob.orbit-right {
-  animation: orbit-right 2.5s linear infinite;
-}
-.blob.orbit-left {
-  animation: orbit-left 2s linear infinite;
-}
-</style>
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	
 </head>
 <body>
 <div id="loader" class="animated fadeIn fadeOut">
@@ -102,8 +60,8 @@ background-color: #293237;
 								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="6U2MAU3JHESYN">
-<input type="image" class="img-responsive" src="https://woocommerce.com/wp-content/uploads/2016/04/PayPal-Express@2x.png" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!">
-
+<!-- <input type="image" class="img-responsive" src="https://woocommerce.com/wp-content/uploads/2016/04/PayPal-Express@2x.png" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!"> -->
+<input type="submit" value="PayPal" name="submit" class="paypal">
 <img alt="" border="0" src="https://www.paypalobjects.com/pl_PL/i/scr/pixel.gif" width="1" height="1">
 </form>
 
