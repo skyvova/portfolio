@@ -17,7 +17,58 @@
 <meta property="og:image:height" content="1024">
 
 	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="stylesheet" href="css/custom.css">
+<style>
+	#main-wrapper {
+  display: none;
+}
+body {	
+background-color: #293237;
+}
+	.main {
+	background-image: linear-gradient(to bottom, #293237, #3d4359, #6f4b6c, #a25461, #b86e43);
+}
+	.contact-form-wrapper {
+		height: 120px;
+	}
+.blobs{
+  width:100vw;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blob{
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+}
+
+@keyframes orbit-left {
+    from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+@keyframes orbit-right {
+    from { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+    to   { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+}
+
+.blob.orbit-right {
+  animation: orbit-right 2.5s linear infinite;
+}
+.blob.orbit-left {
+  animation: orbit-left 2s linear infinite;
+}
+.paypal {
+padding: .6rem 2rem;
+font-size: 1.5rem;
+color: white;
+background-color: #614765;
+}
+
+</style>
 	
 </head>
 <body>
