@@ -7,10 +7,63 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" href="favicon.png" />
 
+<style>
+#main-wrapper {
+  display: none;
+}
+body {	
+  background-color: #293237;
+}
+.blobs{
+  width:100vw;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  filter: blur(8px) contrast(20);
+  background: #fff;
+}
 
+.blob{
+  background: #000;
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+}
+
+@keyframes orbit-left {
+    from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+@keyframes orbit-right {
+    from { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+    to   { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+}
+
+.blob.orbit-right {
+  animation: orbit-right 2.5s linear infinite;
+}
+.blob.orbit-left {
+  animation: orbit-left 2s linear infinite;
+}
+</style>	
 </head>
 <body>
-	
+<div id="loader">
+  <div class="blobs">
+  <div class="blob"></div>
+  <div class="blob orbit-left"></div>
+  <div class="blob"></div>
+  <div class="blob orbit-right"></div>
+  <div class="blob"></div>
+  <div class="blob orbit-left"></div>
+  <div class="blob"></div>
+  <div class="blob orbit-right"></div>
+  <div class="blob"></div>
+</div>
+</div>
+<div id="main-wrapper">
 	<header class="header">
 		<div class="container">
 			<div class="row header-row">
@@ -33,21 +86,13 @@
 							</div>
 							<!-- /.col-md -->
 							<div class="col-md-3">
-								
 								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="EKQQJL28EKQLL">
-<table>
-<tr><td><input type="hidden" name="on0" value="&#1042;&#1080;д &#1088;а&#1073;&#1086;&#1090;&#1099;">&#1042;&#1080;д &#1088;а&#1073;&#1086;&#1090;&#1099;</td></tr><tr><td><select name="os0">
-	<option value="&#1057;а&#1081;&#1090; на &#1058;&#1080;л&#1100;де">&#1057;а&#1081;&#1090; на &#1058;&#1080;л&#1100;де 2 000,00 RUB</option>
-	<option value="PSD to HTML">PSD to HTML 2 000,00 RUB</option>
-	<option value="&#1057;а&#1081;&#1090; &#1087;&#1086;д &#1082;л&#1102;&#1095;">&#1057;а&#1081;&#1090; &#1087;&#1086;д &#1082;л&#1102;&#1095; 6 000,00 RUB</option>
-</select> </td></tr>
-</table>
-<input type="hidden" name="currency_code" value="RUB">
-<input type="image" src="https://www.paypalobjects.com/pl_PL/PL/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – Płać wygodnie i bezpiecznie">
+<input type="hidden" name="hosted_button_id" value="6U2MAU3JHESYN">
+<input type="image" src="https://woocommerce.com/wp-content/uploads/2016/04/PayPal-Express@2x.png" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!">
 <img alt="" border="0" src="https://www.paypalobjects.com/pl_PL/i/scr/pixel.gif" width="1" height="1">
 </form>
+
 
 							</div>
 							<div class="col-md"><div class="contact-form-wrapper">
@@ -166,7 +211,7 @@
 
 
 
-
+</div>
 
 
 
@@ -181,6 +226,17 @@
 
 <link rel="stylesheet" href="css/main.min.css">
 
+<script>
+	let loader  = document.getElementById('loader'),
+	    wrapper = document.getElementById('main-wrapper');
+	
+	window.onload = start();
+	
+	function start() {
+		loader.style.display = "none";
+		wrapper.style.display = "block";
+	};
+</script>
 
 </body>
 </html>
