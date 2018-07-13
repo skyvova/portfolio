@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Портфолио верстальщика - Озиминский Владимир</title>
+	<title>Озиминский Владимир – портфолио верстальщика</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" href="favicon.png" />
@@ -46,13 +46,13 @@ background-color: #293237;
 }
 
 @keyframes orbit-left {
-    from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+    from { transform: rotate(0deg) translateY(0px); }
+    to   { transform: rotate(360deg) translateY(50px); }
 }
 
 @keyframes orbit-right {
-    from { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
-    to   { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    from { transform: rotate(360deg) translateY(50px); }
+    to   { transform: rotate(0deg) translateY(0px); }
 }
 
 .blob.orbit-right {
@@ -73,9 +73,7 @@ background-color: #9E525F;
 	font-family: 'Alegreya', serif;
 }
 	.paypal-form {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		display: inline-block;
 	}
 
 </style>
@@ -117,7 +115,7 @@ background-color: #9E525F;
 						<form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="6U2MAU3JHESYN">
-<input type="image" class="img-responsive" src="https://i0.wp.com/vhconvention.com/wp-content/uploads/2017/10/paypal-checkout-button.png" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!">
+<input type="image" class="img-responsive" src="https://woocommerce.com/wp-content/uploads/2016/04/PayPal-Express@2x.png" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!">
 
 <img alt="" border="0" src="https://www.paypalobjects.com/pl_PL/i/scr/pixel.gif" width="1" height="1">
 </form>
